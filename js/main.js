@@ -4,10 +4,7 @@ $(function(){
   var $clouds = $('#clouds');
   var lat = 'lat=47.61';
   var lon = 'lon=-122.33';
-  var beAnz = 'http://api.openweathermap.org/data/2.5/weather?'+lat+'&'+lon+'&units=imperial';
   var weatherReturned = $.getJSON('http://api.openweathermap.org/data/2.5/weather?'+lat+'&'+lon+'&units=imperial',function(returnedData){
-    console.log(beAnz);
-    console.log(returnedData);
     $location.html('<p>'+returnedData.name+'</p>');
     $weather.html('<p>'+returnedData.main.temp+'</p>');
     $clouds.html('<p>'+returnedData.weather[0].description+'</p>');
