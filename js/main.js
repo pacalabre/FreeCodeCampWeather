@@ -9,25 +9,16 @@ $(function(){
     $weather.html('<p>'+returnedData.main.temp+'</p>');
     $clouds.html('<p>'+returnedData.weather[0].description+'</p>');
   });
+
+   window.onload = function() {
+    var startPos;
+    var geoSuccess = function(position) {
+      startPos = position;
+      console.log(startPos.coords.latitude);
+      console.log(startPos.coords.longitude);
+    };
+    navigator.geolocation.getCurrentPosition(geoSuccess);
+  };
 })
 
 
-
-
-
-
-  // get current location
-
-  /* /get weather from http://openweathermap.org/ - still needs to parse the data
-  $.ajax({
-    type: "GET",
-    url: "http://openweathermap.org/data/2.5/weather?q=seattle.php",
-
-    success: function(weather) {
-        $.each(weather, function(i, weather) {
-          console.log('success',weather);
-          $weather.append('<h1>'+weather+'</h1>');
-      })
-    }
-
-  }) */

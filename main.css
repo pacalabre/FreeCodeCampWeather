@@ -3,7 +3,7 @@
 @import url(https://fonts.googleapis.com/css?family=Pacifico);
 
 body {
-  background-image: url('http://i694.photobucket.com/albums/vv309/pacalabre/photo-1437809781432-a957377661ee.jpg');
+  background-image: url('http://i694.photobucket.com/albums/vv309/pacalabre/photo-1430263326118-b75aa0da770b.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -20,9 +20,12 @@ body {
   font-size: 60px;
   background-color: grey;
   border-radius: 30%;
-  margin: -35px 25% 5% 25%;
+  margin: 0px 25% 5% 25%;
 
   text-align: center;
   opacity: .8;
 }
 
+p {
+  margin: 0px;
+}
